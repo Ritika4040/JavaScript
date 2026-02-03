@@ -1,0 +1,73 @@
+1. What is JavaScript?
+
+JavaScript is a scripting language used to create dynamic and interactive web pages.
+
+It runs on the client side (browser).
+
+It works together with HTML and CSS.
+
+Uses:
+
+Form validation
+
+Button click actions
+
+Dynamic content updates
+
+2. Where JavaScript Runs
+
+Web browsers (Chrome, Firefox, Edge)
+
+Inside HTML files
+
+Server-side using Node.js
+
+3. First JavaScript Program
+console.log("Hello, JavaScript");
+
+Explanation:
+
+console.log() → prints output
+
+Output appears in the browser console
+
+4. Variables in JavaScript
+
+Variables are used to store data.
+
+Types of Variable Keywords:
+Keyword	Description
+let	Value can be changed
+const	Value cannot be changed
+Example:
+let name = "Ritika";
+const age = 20;
+
+5. Basic Data Types
+Data Type	Example
+Number	let a = 10;
+String	let text = "Hello";
+Boolean	let isTrue = true;
+6. Output Statement
+
+console.log() is used to display output.
+
+console.log("Learning JS");
+
+7. How to Execute JavaScript
+
+Open browser
+
+Right-click → Inspect
+
+Select Console
+
+Write JavaScript code
+
+8. Important Points
+
+JavaScript is case-sensitive
+
+Statements end with ;
+
+var is outdated, use let or const
