@@ -1,0 +1,107 @@
+JavaScript Conditional Statements (Notes)
+
+Definition
+Conditional statements are used to execute code based on conditions.
+
+1. if Statement
+Executes code only when condition is true.
+
+Syntax:
+
+if (condition) {
+  // code
+}
+
+
+Example:
+
+if (age >= 18) {
+  console.log("Eligible to vote");
+}
+
+2. if–else Statement
+
+Executes one block if condition is true.
+
+Executes another block if condition is false.
+
+if (condition) {
+  // true block
+} else {
+  // false block
+}
+
+3. if–else if–else
+
+Used for multiple conditions.
+
+Conditions are checked top to bottom.
+
+if (marks >= 90) {
+  grade = "A";
+} else if (marks >= 60) {
+  grade = "B";
+} else {
+  grade = "C";
+}
+
+4. switch Statement
+
+Used when multiple fixed values are possible.
+
+break prevents fall-through.
+
+switch (expression) {
+  case value1:
+    // code
+    break;
+  case value2:
+    // code
+    break;
+  default:
+    // code
+}
+
+5. Ternary Operator
+
+Short form of if–else.
+
+Syntax:
+
+condition ? trueValue : falseValue;
+
+
+Example:
+
+let result = (age >= 18) ? "Adult" : "Minor";
+
+Operators Used in Conditions
+Comparison Operators
+
+== Equal (value)
+
+=== Equal (value + type)
+
+!= Not equal
+
+!== Not equal (value + type)
+
+> < >= <=
+
+Logical Operators
+
+&& AND
+|| OR
+! NOT
+
+Important Points ⭐
+
+Conditions return Boolean value (true / false)
+=== is preferred over ==
+switch is faster for multiple fixed cases
+Use proper indentation for readability
+
+Summary
+
+Conditional statements control program flow
+Common types: if, if–else, else if, switch, ternary
