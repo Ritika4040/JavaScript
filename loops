@@ -1,0 +1,214 @@
+JavaScript Loops – Detailed Theory Notes
+1) Introduction to Loops
+
+Loops are control flow statements used to execute a block of code repeatedly until a given condition becomes false. They help reduce code repetition and make programs more efficient and readable.
+
+In JavaScript, loops are mainly used for:
+
+Repeating tasks
+
+Traversing arrays and objects
+
+Processing data
+
+Automating calculations
+
+2) Why Loops are Important
+
+Without loops, we would need to write the same code many times.
+
+Example without loop:
+
+console.log(1);
+console.log(2);
+console.log(3);
+console.log(4);
+console.log(5);
+
+
+With loop:
+
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
+}
+
+
+Loops save time, reduce code length, and make programs easier to manage.
+
+3) Types of Loops in JavaScript
+A) for Loop (Entry-Controlled Loop)
+
+The condition is checked before executing the loop body.
+
+Structure:
+
+for (initialization; condition; update) {
+   // code block
+}
+
+
+Working:
+
+Initialization runs once.
+
+Condition is checked.
+
+If true → code runs.
+
+Update changes the variable.
+
+Condition checked again.
+
+Use Case:
+
+When number of repetitions is known.
+
+B) while Loop (Entry-Controlled Loop)
+
+The loop runs as long as the condition remains true.
+
+Structure:
+
+while (condition) {
+   // code
+}
+
+
+Working:
+
+First checks condition.
+
+If true → executes code.
+
+Repeats until condition becomes false.
+
+Use Case:
+
+When number of repetitions is not known.
+
+C) do...while Loop (Exit-Controlled Loop)
+
+This loop executes the code first and checks the condition later.
+
+Structure:
+
+do {
+   // code
+} while (condition);
+
+
+Key Feature:
+
+Runs at least once even if the condition is false.
+
+Use Case:
+
+When the code must execute at least one time.
+
+D) for...in Loop
+
+Used to iterate over object properties (keys).
+
+Important Points:
+
+Works with objects
+
+Returns keys/indexes
+
+Use Case:
+
+Reading object data
+
+E) for...of Loop
+
+Used to iterate over iterable elements like:
+
+Arrays
+
+Strings
+
+Maps
+
+Sets
+
+Important Points:
+
+Returns values directly
+
+Easier than normal for loop for arrays
+
+4) Entry-Controlled vs Exit-Controlled Loops
+Type	Condition Check	Example
+Entry-Controlled	Before execution	for, while
+Exit-Controlled	After execution	do...while
+5) Infinite Loop
+
+A loop that never stops because the condition never becomes false.
+
+Example:
+
+while (true) {
+  console.log("Hello");
+}
+
+
+Reason:
+
+Missing update statement
+
+Always true condition
+
+6) Nested Loops
+
+A loop inside another loop.
+
+Example:
+
+for (let i = 1; i <= 3; i++) {
+  for (let j = 1; j <= 2; j++) {
+    console.log(i, j);
+  }
+}
+
+
+Use Case:
+
+Pattern printing
+
+Matrix operations
+
+7) Loop Control Statements
+break
+
+Immediately stops the loop.
+
+continue
+
+Skips the current iteration and moves to the next.
+
+8) Difference Between for, while, and do...while
+Feature	for	while	do...while
+Condition Check	Before	Before	After
+Minimum Execution	0	0	1
+Best For	Known count	Unknown count	Must run once
+9) Performance Consideration
+
+for loop is faster for arrays.
+
+for...of is cleaner and readable.
+
+Avoid infinite loops to prevent system crash.
+
+10) Real-Life Examples of Loops
+
+Showing numbers 1 to 100
+
+Checking items in a shopping cart
+
+Reading student marks
+
+Running a game until player loses
+
+11) Summary
+
+Loops are one of the most important concepts in JavaScript. They help in repeating tasks, processing large data, and writing efficient code. Choosing the correct loop depends on the problem, condition, and data type.
