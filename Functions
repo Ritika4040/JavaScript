@@ -1,0 +1,868 @@
+# Functions in JavaScript
+
+# 1. Introduction to Functions
+
+## Definition
+
+A function is a reusable block of code designed to perform a specific task.
+
+Functions help programmers:
+
+* Avoid code repetition
+* Improve readability
+* Organize programs
+* Simplify debugging
+
+Instead of writing the same code multiple times, a function can be created once and used whenever needed.
+
+---
+
+# Why Functions are Important
+
+Functions are one of the most important concepts in JavaScript because they:
+
+* Make code modular
+* Improve maintainability
+* Reduce redundancy
+* Support reusable programming
+
+---
+
+# Real-Life Example
+
+Think of a function like a calculator button.
+
+When you press the addition button:
+
+* Inputs are given
+* Processing happens
+* Output is returned
+
+Functions work similarly in programming.
+
+---
+
+# Basic Syntax of Function
+
+```javascript id="dzc0n2"
+function functionName(){
+
+   // code
+}
+```
+
+---
+
+# Example
+
+```javascript id="m7qrvn"
+function greet(){
+
+   console.log("Welcome to JavaScript");
+}
+
+greet();
+```
+
+---
+
+# Output
+
+```javascript id="yvdfll"
+Welcome to JavaScript
+```
+
+---
+
+# Explanation
+
+* `function` keyword creates the function.
+* `greet` is the function name.
+* `greet()` calls the function.
+
+---
+
+# Advantages of Functions
+
+* Reusability
+* Better organization
+* Easy testing
+* Reduced code duplication
+* Easier maintenance
+
+---
+
+# 2. Function Declaration
+
+## Definition
+
+A function declaration defines a named function using the `function` keyword.
+
+---
+
+# Syntax
+
+```javascript id="f7myyu"
+function functionName(parameters){
+
+   // code
+}
+```
+
+---
+
+# Example
+
+```javascript id="1ht5lg"
+function add(a, b){
+
+   console.log(a + b);
+}
+
+add(5, 3);
+```
+
+---
+
+# Output
+
+```javascript id="foc2f2"
+8
+```
+
+---
+
+# Explanation
+
+* `a` and `b` are parameters.
+* `5` and `3` are arguments.
+* Function adds both values.
+
+---
+
+# Characteristics
+
+* Can be called before declaration due to hoisting.
+* Named function.
+* Reusable multiple times.
+
+---
+
+# Function Hoisting
+
+JavaScript moves function declarations to the top internally.
+
+Example:
+
+```javascript id="5ur2v8"
+greet();
+
+function greet(){
+
+   console.log("Hello");
+}
+```
+
+---
+
+# Output
+
+```javascript id="zt54ao"
+Hello
+```
+
+---
+
+# Advantages
+
+* Easy to understand
+* Supports hoisting
+* Suitable for reusable logic
+
+---
+
+# 3. Function Expression
+
+## Definition
+
+A function expression stores a function inside a variable.
+
+---
+
+# Syntax
+
+```javascript id="6mb5zm"
+let variableName = function(){
+
+   // code
+};
+```
+
+---
+
+# Example
+
+```javascript id="5t12wa"
+let multiply = function(a, b){
+
+   return a * b;
+};
+
+console.log(multiply(4, 5));
+```
+
+---
+
+# Output
+
+```javascript id="v8q0eq"
+20
+```
+
+---
+
+# Explanation
+
+* Function is assigned to variable `multiply`.
+* Variable behaves like a function.
+
+---
+
+# Characteristics
+
+* Functions can be stored in variables.
+* Useful for callbacks and dynamic programming.
+* Not hoisted like function declarations.
+
+---
+
+# Difference Between Declaration and Expression
+
+| Function Declaration | Function Expression |
+| -------------------- | ------------------- |
+| Named function       | Stored in variable  |
+| Hoisted              | Not fully hoisted   |
+| Easier syntax        | More flexible       |
+
+---
+
+# 4. Arrow Functions
+
+## Definition
+
+Arrow functions are a shorter syntax introduced in ES6 for writing functions.
+
+---
+
+# Syntax
+
+```javascript id="2i0ynr"
+const functionName = () => {
+
+   // code
+};
+```
+
+---
+
+# Example
+
+```javascript id="xwzuv7"
+const greet = () => {
+
+   console.log("Hello");
+};
+
+greet();
+```
+
+---
+
+# Output
+
+```javascript id="32f1i6"
+Hello
+```
+
+---
+
+# Arrow Function with Parameters
+
+```javascript id="vlv2ll"
+const add = (a, b) => {
+
+   return a + b;
+};
+
+console.log(add(2, 3));
+```
+
+---
+
+# Output
+
+```javascript id="6z0g9n"
+5
+```
+
+---
+
+# Short Form
+
+```javascript id="n2s2pi"
+const square = x => x * x;
+```
+
+---
+
+# Characteristics
+
+* Short syntax
+* No own `this`
+* Best for small functions
+
+---
+
+# Advantages
+
+* Cleaner code
+* Easy readability
+* Useful in callbacks
+
+---
+
+# Limitations
+
+* Cannot be used as constructors
+* `this` behaves differently
+
+---
+
+# 5. Parameters and Arguments
+
+# Parameters
+
+## Definition
+
+Parameters are variables listed in function definition.
+
+---
+
+# Example
+
+```javascript id="k7u1qa"
+function greet(name){
+
+   console.log(name);
+}
+```
+
+`name` is a parameter.
+
+---
+
+# Arguments
+
+## Definition
+
+Arguments are actual values passed to the function.
+
+---
+
+# Example
+
+```javascript id="dy7v05"
+greet("Ritika");
+```
+
+`"Ritika"` is an argument.
+
+---
+
+# Types of Parameters
+
+## 1. Default Parameters
+
+```javascript id="lgc9k7"
+function greet(name = "Guest"){
+
+   console.log(name);
+}
+```
+
+---
+
+## 2. Rest Parameters
+
+```javascript id="z4h4tg"
+function sum(...numbers){
+
+   console.log(numbers);
+}
+```
+
+---
+
+# Advantages
+
+* Makes functions flexible
+* Supports dynamic input
+* Reduces errors
+
+---
+
+# 6. Return Statement
+
+## Definition
+
+The `return` statement sends a value back from a function.
+
+---
+
+# Syntax
+
+```javascript id="uzrm3v"
+return value;
+```
+
+---
+
+# Example
+
+```javascript id="ttg8ww"
+function add(a, b){
+
+   return a + b;
+}
+
+let result = add(5, 3);
+
+console.log(result);
+```
+
+---
+
+# Output
+
+```javascript id="l5gc6q"
+8
+```
+
+---
+
+# Explanation
+
+* Function returns sum.
+* Returned value stored in variable.
+
+---
+
+# Important Points
+
+* Function stops after `return`.
+* One function can return one value at a time.
+
+---
+
+# Example
+
+```javascript id="wdn2rj"
+function test(){
+
+   return "Hello";
+
+   console.log("World");
+}
+```
+
+`console.log("World")` never executes.
+
+---
+
+# Advantages
+
+* Makes functions reusable
+* Allows output storage
+* Supports calculations
+
+---
+
+# 7. Scope in JavaScript
+
+## Definition
+
+Scope determines where variables can be accessed in a program.
+
+---
+
+# Types of Scope
+
+1. Global Scope
+2. Local Scope
+3. Block Scope
+
+---
+
+# 1. Global Scope
+
+Variables declared outside functions are globally accessible.
+
+---
+
+# Example
+
+```javascript id="8nixll"
+let name = "Ritika";
+
+function show(){
+
+   console.log(name);
+}
+```
+
+---
+
+# 2. Local Scope
+
+Variables declared inside functions are accessible only within that function.
+
+---
+
+# Example
+
+```javascript id="k9tlqv"
+function test(){
+
+   let age = 21;
+
+   console.log(age);
+}
+```
+
+---
+
+# 3. Block Scope
+
+Variables declared using `let` and `const` are block scoped.
+
+---
+
+# Example
+
+```javascript id="nvzw2t"
+if(true){
+
+   let x = 10;
+}
+```
+
+`x` cannot be accessed outside block.
+
+---
+
+# Scope Chain
+
+JavaScript searches variables from inner scope to outer scope.
+
+---
+
+# Advantages of Scope
+
+* Prevents variable conflicts
+* Improves security
+* Better memory management
+
+---
+
+# 8. Closures
+
+## Definition
+
+A closure is a function that remembers variables from its outer scope even after the outer function has finished execution.
+
+---
+
+# Example
+
+```javascript id="e0r93n"
+function outer(){
+
+   let count = 0;
+
+   function inner(){
+
+      count++;
+      console.log(count);
+   }
+
+   return inner;
+}
+
+const counter = outer();
+
+counter();
+counter();
+```
+
+---
+
+# Output
+
+```javascript id="o8m2i0"
+1
+2
+```
+
+---
+
+# Explanation
+
+`inner()` remembers variable `count` even after outer function finishes.
+
+---
+
+# Uses of Closures
+
+* Data hiding
+* Private variables
+* Function factories
+* Event handlers
+
+---
+
+# Advantages
+
+* Preserves data
+* Supports encapsulation
+* Improves modularity
+
+---
+
+# 9. Callback Functions
+
+## Definition
+
+A callback function is a function passed as an argument to another function.
+
+---
+
+# Example
+
+```javascript id="96rt8h"
+function greet(name){
+
+   console.log("Hello " + name);
+}
+
+function processUser(callback){
+
+   callback("Ritika");
+}
+
+processUser(greet);
+```
+
+---
+
+# Output
+
+```javascript id="m24k8r"
+Hello Ritika
+```
+
+---
+
+# Explanation
+
+* `greet` passed as argument.
+* Another function executes it.
+
+---
+
+# Uses of Callback Functions
+
+* Event handling
+* Asynchronous programming
+* Timers
+* API requests
+
+---
+
+# Advantages
+
+* Flexible programming
+* Better asynchronous handling
+* Code reusability
+
+---
+
+# Disadvantages
+
+* Callback nesting can create complexity
+* Difficult debugging
+
+---
+
+# 10. Higher-Order Functions
+
+## Definition
+
+A higher-order function is a function that:
+
+* Takes another function as argument
+  OR
+* Returns another function
+
+---
+
+# Example
+
+```javascript id="7l5x3y"
+function calculate(a, b, operation){
+
+   return operation(a, b);
+}
+
+function add(x, y){
+
+   return x + y;
+}
+
+console.log(calculate(5, 3, add));
+```
+
+---
+
+# Output
+
+```javascript id="itx1pd"
+8
+```
+
+---
+
+# Common Higher-Order Functions
+
+* `map()`
+* `filter()`
+* `reduce()`
+
+---
+
+# Example of map()
+
+```javascript id="1n0hqo"
+let numbers = [1, 2, 3];
+
+let result = numbers.map(num => num * 2);
+
+console.log(result);
+```
+
+---
+
+# Output
+
+```javascript id="g0b7nk"
+[2, 4, 6]
+```
+
+---
+
+# Advantages
+
+* Cleaner code
+* Functional programming support
+* Better abstraction
+
+---
+
+# 11. Recursion
+
+## Definition
+
+Recursion is a process where a function calls itself repeatedly until a stopping condition is met.
+
+---
+
+# Syntax
+
+```javascript id="30mllv"
+function functionName(){
+
+   functionName();
+}
+```
+
+---
+
+# Example: Factorial
+
+## Formula
+
+n! = n \times (n-1)!
+
+```javascript id="j2g4jl"
+function factorial(n){
+
+   if(n == 1){
+      return 1;
+   }
+
+   return n * factorial(n - 1);
+}
+
+console.log(factorial(5));
+```
+
+---
+
+# Output
+
+```javascript id="wj9v7m"
+120
+```
+
+---
+
+# Step-by-Step Working
+
+```text
+factorial(5)
+5 × factorial(4)
+5 × 4 × factorial(3)
+5 × 4 × 3 × factorial(2)
+5 × 4 × 3 × 2 × factorial(1)
+5 × 4 × 3 × 2 × 1
+120
+```
+
+---
+
+# Base Condition
+
+A stopping condition is necessary to prevent infinite recursion.
+
+---
+
+# Advantages
+
+* Simplifies complex problems
+* Useful in tree and graph traversal
+* Cleaner mathematical solutions
+
+---
+
+# Disadvantages
+
+* Higher memory usage
+* Slower than loops in some cases
+* Risk of stack overflow
+
+---
+
+# Summary
+
+Functions are one of the most important parts of JavaScript programming. They help organize code,
+improve reusability, and simplify development. Advanced concepts like closures, callbacks, higher-order 
+functions, and recursion make JavaScript powerful for modern web development, asynchronous programming, and functional programming.
