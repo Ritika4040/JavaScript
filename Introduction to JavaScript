@@ -1,0 +1,917 @@
+# 1. Introduction to JavaScript
+
+## Definition
+
+JavaScript is a high-level, interpreted programming language mainly used to create interactive and dynamic web pages. 
+It is one of the core technologies of web development along with HTML and CSS.
+
+* HTML is used for structure.
+* CSS is used for styling.
+* JavaScript is used for functionality and interactivity.
+
+JavaScript allows developers to create features like:
+
+* Image sliders
+* Form validation
+* Pop-up messages
+* Interactive maps
+* Animations
+* Dynamic content updates
+
+---
+
+## Example of JavaScript
+
+```javascript
+console.log("Hello World");
+```
+
+### Output:
+
+```javascript
+Hello World
+```
+
+This program prints “Hello World” in the browser console.
+
+---
+
+## Why JavaScript is Important
+
+JavaScript is important because it makes websites interactive and user-friendly.
+
+### Without JavaScript:
+
+* Websites are static.
+* No dynamic updates.
+* Limited user interaction.
+
+### With JavaScript:
+
+* Websites become dynamic.
+* Users can interact with content.
+* Real-time updates are possible.
+
+---
+
+## Characteristics of JavaScript
+
+* Lightweight language
+* Object-oriented
+* Event-driven
+* Platform independent
+* Interpreted language
+* Supports functional programming
+
+---
+
+# 2. History of JavaScript
+
+## Origin of JavaScript
+
+JavaScript was created by Brendan Eich in 1995 while working at Netscape.
+
+The language was developed in only 10 days for the Netscape Navigator browser.
+
+---
+
+## Earlier Names
+
+JavaScript was originally called:
+
+1. Mocha
+2. LiveScript
+3. JavaScript
+
+The name “JavaScript” was chosen for marketing purposes because Java was very popular at that time.
+
+---
+
+## Standardization
+
+JavaScript was standardized by:
+
+* ECMA International
+
+The official standard is called:
+
+* ECMAScript
+
+---
+
+## Major Versions
+
+| Version      | Year   | Features                                |
+| ------------ | ------ | --------------------------------------- |
+| ES1          | 1997   | First standard                          |
+| ES5          | 2009   | Strict mode, JSON support               |
+| ES6 (ES2015) | 2015   | let, const, classes, arrow functions    |
+| ES7+         | Modern | Async/await, modules, advanced features |
+
+---
+
+## Growth of JavaScript
+
+Today JavaScript is used for:
+
+* Frontend development
+* Backend development
+* Mobile apps
+* Desktop applications
+* Game development
+* Cloud applications
+
+Popular technologies:
+
+* Node.js
+* React
+* Angular
+* Vue.js
+
+---
+
+# 3. Features of JavaScript
+
+## 1. Lightweight
+
+JavaScript is lightweight because it uses less memory and runs quickly in browsers.
+
+---
+
+## 2. Interpreted Language
+
+JavaScript code is executed line by line without compilation.
+
+### Advantage:
+
+* Faster development
+* Easy debugging
+
+---
+
+## 3. Dynamic Typing
+
+Variables do not require datatype declaration.
+
+```javascript
+let x = 10;
+x = "Hello";
+```
+
+The same variable can store different data types.
+
+---
+
+## 4. Object-Oriented
+
+JavaScript supports objects and classes.
+
+```javascript
+let student = {
+  name: "Ritika",
+  age: 21
+};
+```
+
+---
+
+## 5. Event-Driven
+
+JavaScript responds to user actions like:
+
+* Mouse click
+* Keyboard input
+* Form submission
+
+---
+
+## 6. Platform Independent
+
+JavaScript works on:
+
+* Windows
+* Linux
+* macOS
+* Mobile devices
+
+---
+
+## 7. Client-Side Scripting
+
+JavaScript mainly runs inside the web browser.
+
+### Benefits:
+
+* Fast execution
+* Reduced server load
+
+---
+
+## 8. Asynchronous Programming
+
+JavaScript can perform tasks without stopping the whole program.
+
+Example:
+
+* API calls
+* Data fetching
+
+---
+
+## 9. Case Sensitive
+
+JavaScript treats uppercase and lowercase differently.
+
+```javascript
+let name;
+let Name;
+```
+
+Both variables are different.
+
+---
+
+# 4. Applications of JavaScript
+
+JavaScript is widely used in many areas of software development.
+
+---
+
+## 1. Web Development
+
+Used to create:
+
+* Interactive websites
+* Dynamic web pages
+* Form validation
+* Animations
+
+---
+
+## 2. Frontend Development
+
+Popular frontend frameworks:
+
+* React
+* Angular
+* Vue.js
+
+---
+
+## 3. Backend Development
+
+Using Node.js, JavaScript can run on servers.
+
+Applications:
+
+* APIs
+* Authentication systems
+* Databases
+* Web servers
+
+---
+
+## 4. Mobile App Development
+
+Technologies:
+
+* React Native
+* Ionic
+
+---
+
+## 5. Game Development
+
+JavaScript is used for browser games and 2D/3D games.
+
+Libraries:
+
+* Phaser
+* Three.js
+
+---
+
+## 6. Desktop Applications
+
+Frameworks:
+
+* Electron
+
+Examples:
+
+* Visual Studio Code
+* Discord
+
+---
+
+## 7. Web APIs
+
+JavaScript connects with:
+
+* Weather APIs
+* Payment APIs
+* Social media APIs
+
+---
+
+## 8. Artificial Intelligence and Machine Learning
+
+Libraries:
+
+* TensorFlow.js
+* Brain.js
+
+---
+
+# 5. Advantages and Limitations of JavaScript
+
+# Advantages of JavaScript
+
+---
+
+## 1. Easy to Learn
+
+JavaScript syntax is simple and beginner-friendly.
+
+---
+
+## 2. Fast Execution
+
+Runs directly in the browser.
+
+---
+
+## 3. Platform Independent
+
+Works on all major operating systems.
+
+---
+
+## 4. Large Community Support
+
+Millions of developers use JavaScript.
+
+---
+
+## 5. Rich Ecosystem
+
+Thousands of libraries and frameworks are available.
+
+---
+
+## 6. Supports Both Frontend and Backend
+
+JavaScript can be used for full-stack development.
+
+---
+
+## 7. Reduces Server Load
+
+Client-side execution reduces server processing.
+
+---
+
+# Limitations of JavaScript
+
+---
+
+## 1. Security Risks
+
+JavaScript code is visible in browsers.
+
+---
+
+## 2. Browser Compatibility Issues
+
+Some features may work differently in different browsers.
+
+---
+
+## 3. Single-Threaded
+
+JavaScript executes one task at a time.
+
+---
+
+## 4. Debugging Complexity
+
+Large applications can become difficult to debug.
+
+---
+
+## 5. Limited File Access
+
+Browsers restrict access to local files for security.
+
+---
+
+# 6. JavaScript Execution Environment
+
+## Definition
+
+The JavaScript execution environment is the platform where JavaScript code runs.
+
+---
+
+# Types of Execution Environments
+
+## 1. Browser Environment
+
+JavaScript runs inside web browsers.
+
+Examples:
+
+* Google Chrome
+* Mozilla Firefox
+* Microsoft Edge
+
+### Browser Components:
+
+* JavaScript Engine
+* Memory Heap
+* Call Stack
+* Web APIs
+
+---
+
+## 2. Server Environment
+
+Using Node.js, JavaScript runs outside browsers.
+
+Used for:
+
+* Backend servers
+* APIs
+* File handling
+
+---
+
+# JavaScript Engines
+
+A JavaScript engine converts code into machine code.
+
+| Browser | Engine         |
+| ------- | -------------- |
+| Chrome  | V8             |
+| Firefox | SpiderMonkey   |
+| Safari  | JavaScriptCore |
+
+---
+
+# 7. Installing and Setting Up Environment
+
+# Method 1: Using Browser
+
+JavaScript can run directly in browsers.
+
+## Steps:
+
+1. Open browser.
+2. Press `F12`.
+3. Open Console tab.
+4. Write JavaScript code.
+
+Example:
+
+```javascript
+console.log("Welcome");
+```
+
+---
+
+# Method 2: Using VS Code
+
+## Requirements:
+
+* Visual Studio Code
+* Browser
+
+## Steps:
+
+1. Install VS Code.
+2. Create `.html` file.
+3. Add JavaScript code.
+4. Run in browser.
+
+---
+
+# Method 3: Using Node.js
+
+## Steps:
+
+1. Install Node.js
+2. Open terminal.
+3. Run:
+
+```bash
+node filename.js
+```
+
+---
+
+# 8. JavaScript Syntax
+
+## Definition
+
+Syntax refers to the rules for writing JavaScript programs.
+
+---
+
+# Basic Syntax Rules
+
+## 1. Statements
+
+```javascript
+let x = 10;
+```
+
+---
+
+## 2. Semicolon
+
+Semicolon ends statements.
+
+```javascript
+let age = 21;
+```
+
+---
+
+## 3. Case Sensitivity
+
+```javascript
+let name;
+let Name;
+```
+
+Both are different.
+
+---
+
+## 4. Curly Braces
+
+Used for blocks.
+
+```javascript
+if(true){
+  console.log("Hello");
+}
+```
+
+---
+
+## 5. Indentation
+
+Improves readability.
+
+---
+
+# 9. Variables in JavaScript
+
+## Definition
+
+Variables store data values.
+
+---
+
+# Declaring Variables
+
+## 1. var
+
+```javascript
+var city = "Delhi";
+```
+
+### Features:
+
+* Old method
+* Function scoped
+
+---
+
+## 2. let
+
+```javascript
+let age = 21;
+```
+
+### Features:
+
+* Block scoped
+* Can be updated
+
+---
+
+## 3. const
+
+```javascript
+const pi = 3.14;
+```
+
+### Features:
+
+* Cannot be reassigned
+* Block scoped
+
+---
+
+# Rules for Variable Names
+
+* Must start with letter, `_`, or `$`
+* Cannot start with number
+* Cannot use reserved keywords
+
+Valid:
+
+```javascript
+let studentName;
+```
+
+Invalid:
+
+```javascript
+let 1name;
+```
+
+---
+
+# 10. Data Types
+
+## Definition
+
+Data types specify the type of value stored.
+
+---
+
+# Primitive Data Types
+
+## 1. Number
+
+```javascript
+let x = 10;
+```
+
+---
+
+## 2. String
+
+```javascript
+let name = "Ritika";
+```
+
+---
+
+## 3. Boolean
+
+```javascript
+let isActive = true;
+```
+
+---
+
+## 4. Undefined
+
+```javascript
+let value;
+```
+
+---
+
+## 5. Null
+
+```javascript
+let data = null;
+```
+
+---
+
+## 6. BigInt
+
+```javascript
+let big = 12345678901234567890n;
+```
+
+---
+
+## 7. Symbol
+
+```javascript
+let id = Symbol("id");
+```
+
+---
+
+# Non-Primitive Data Types
+
+## Object
+
+```javascript
+let student = {
+  name: "Ritika",
+  age: 21
+};
+```
+
+---
+
+## Array
+
+```javascript
+let colors = ["red", "blue"];
+```
+
+---
+
+# 11. Operators in JavaScript
+
+Operators perform operations on values.
+
+---
+
+# Types of Operators
+
+## 1. Arithmetic Operators
+
+| Operator | Meaning        |
+| -------- | -------------- |
+| +        | Addition       |
+| -        | Subtraction    |
+| *        | Multiplication |
+| /        | Division       |
+| %        | Modulus        |
+
+Example:
+
+```javascript
+let sum = 10 + 5;
+```
+
+---
+
+## 2. Assignment Operators
+
+```javascript
+x += 5;
+```
+
+---
+
+## 3. Comparison Operators
+
+| Operator | Meaning      |
+| -------- | ------------ |
+| ==       | Equal        |
+| ===      | Strict Equal |
+| !=       | Not Equal    |
+| >        | Greater Than |
+
+---
+
+## 4. Logical Operators
+
+| Operator | Meaning |
+| -------- | ------- |
+| &&       | AND     |
+| ||       | OR      |
+| !        | NOT     |
+
+---
+
+## 5. Increment and Decrement
+
+```javascript
+x++;
+x--;
+```
+
+---
+
+# 12. Type Conversion
+
+## Definition
+
+Type conversion means converting one datatype into another.
+
+---
+
+# Types of Conversion
+
+## 1. Implicit Conversion
+
+Automatically done by JavaScript.
+
+```javascript
+let result = "5" + 2;
+```
+
+Output:
+
+```javascript
+52
+```
+
+---
+
+## 2. Explicit Conversion
+
+Manually done by programmer.
+
+### String to Number
+
+```javascript
+Number("10");
+```
+
+### Number to String
+
+```javascript
+String(100);
+```
+
+### Boolean Conversion
+
+```javascript
+Boolean(1);
+```
+
+---
+
+# 13. Input and Output in JavaScript
+
+# Output Methods
+
+## 1. console.log()
+
+```javascript
+console.log("Hello");
+```
+
+---
+
+## 2. alert()
+
+```javascript
+alert("Welcome");
+```
+
+---
+
+## 3. document.write()
+
+```javascript
+document.write("Hello");
+```
+
+---
+
+# Input Methods
+
+## 1. prompt()
+
+```javascript
+let name = prompt("Enter Name");
+```
+
+---
+
+## 2. HTML Forms
+
+JavaScript can take input from forms.
+
+---
+
+# 14. Comments in JavaScript
+
+## Definition
+
+Comments are notes ignored by the JavaScript interpreter.
+
+---
+
+# Types of Comments
+
+## 1. Single-Line Comment
+
+```javascript
+// This is a comment
+```
+
+---
+
+## 2. Multi-Line Comment
+
+```javascript
+/*
+This is
+multi-line comment
+*/
+```
+
+---
+
+# Advantages of Comments
+
+* Improves readability
+* Helps debugging
+* Explains code logic
+* Makes maintenance easier
