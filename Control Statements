@@ -1,0 +1,809 @@
+# Control Statements in JavaScript
+
+## Definition
+
+Control statements are used to control the flow of execution of a program. They decide:
+
+* Which statement will execute
+* How many times a statement will run
+* When the execution should stop
+
+Control statements make programs dynamic and intelligent.
+
+---
+
+# Types of Control Statements
+
+1. Conditional Statements
+2. Looping Statements
+3. Jump Statements
+
+---
+
+# 1. Conditional Statements
+
+## Definition
+
+Conditional statements are used to execute code based on conditions.
+
+The condition usually returns:
+
+* `true`
+* `false`
+
+If the condition is true, one block of code runs.
+If false, another block may run.
+
+---
+
+# Types of Conditional Statements
+
+1. if Statement
+2. if-else Statement
+3. else-if Ladder
+4. switch Statement
+
+---
+
+# 2. if Statement
+
+## Definition
+
+The `if` statement executes a block of code only if the condition is true.
+
+---
+
+# Syntax
+
+```javascript id="1x8gw1"
+if(condition){
+   // code
+}
+```
+
+---
+
+# Flow of if Statement
+
+* Condition is checked.
+* If condition is true → code executes.
+* If condition is false → code is skipped.
+
+---
+
+# Example
+
+```javascript id="l57gsk"
+let age = 20;
+
+if(age >= 18){
+   console.log("Eligible to vote");
+}
+```
+
+---
+
+# Output
+
+```javascript id="mbyo3k"
+Eligible to vote
+```
+
+---
+
+# Explanation
+
+Since age is greater than 18, the condition becomes true.
+
+---
+
+# Characteristics of if Statement
+
+* Simple decision-making statement
+* Executes only when condition is true
+* No action when condition is false
+
+---
+
+# Advantages
+
+* Easy to use
+* Improves decision-making
+* Reduces unnecessary execution
+
+---
+
+# 3. if-else Statement
+
+## Definition
+
+The `if-else` statement executes one block if condition is true and another block if condition is false.
+
+---
+
+# Syntax
+
+```javascript id="9owk9s"
+if(condition){
+   // true block
+}
+else{
+   // false block
+}
+```
+
+---
+
+# Working
+
+* Condition checked first
+* If true → if block executes
+* If false → else block executes
+
+---
+
+# Example
+
+```javascript id="1mx19y"
+let number = 5;
+
+if(number % 2 == 0){
+   console.log("Even Number");
+}
+else{
+   console.log("Odd Number");
+}
+```
+
+---
+
+# Output
+
+```javascript id="jicj3m"
+Odd Number
+```
+
+---
+
+# Explanation
+
+5 is not divisible by 2, so else block executes.
+
+---
+
+# Advantages
+
+* Handles both true and false cases
+* Improves program logic
+* Useful in validation systems
+
+---
+
+# Real-Life Example
+
+```javascript id="2x3c4b"
+let password = "admin123";
+
+if(password == "admin123"){
+   console.log("Login Successful");
+}
+else{
+   console.log("Wrong Password");
+}
+```
+
+---
+
+# 4. else-if Ladder
+
+## Definition
+
+The `else-if ladder` is used when multiple conditions need to be checked.
+
+---
+
+# Syntax
+
+```javascript id="11xtk5"
+if(condition1){
+   // code
+}
+else if(condition2){
+   // code
+}
+else if(condition3){
+   // code
+}
+else{
+   // default code
+}
+```
+
+---
+
+# Working
+
+* Conditions are checked from top to bottom.
+* First true condition executes.
+* Remaining conditions are skipped.
+* If no condition is true, else block runs.
+
+---
+
+# Example
+
+```javascript id="dks62k"
+let marks = 75;
+
+if(marks >= 90){
+   console.log("Grade A");
+}
+else if(marks >= 70){
+   console.log("Grade B");
+}
+else if(marks >= 50){
+   console.log("Grade C");
+}
+else{
+   console.log("Fail");
+}
+```
+
+---
+
+# Output
+
+```javascript id="4z6q3d"
+Grade B
+```
+
+---
+
+# Explanation
+
+75 satisfies the second condition.
+
+---
+
+# Advantages
+
+* Handles multiple conditions
+* Better than writing many if statements
+* Useful in grading systems and menus
+
+---
+
+# Disadvantages
+
+* Long ladders reduce readability
+* Slower if too many conditions exist
+
+---
+
+# 5. switch Statement
+
+## Definition
+
+The `switch` statement selects one block of code from multiple options.
+
+It is an alternative to long else-if ladders.
+
+---
+
+# Syntax
+
+```javascript id="sv0grd"
+switch(expression){
+
+   case value1:
+      // code
+      break;
+
+   case value2:
+      // code
+      break;
+
+   default:
+      // code
+}
+```
+
+---
+
+# Working
+
+* Expression value is checked.
+* Matching case executes.
+* `break` stops execution.
+* `default` runs if no case matches.
+
+---
+
+# Example
+
+```javascript id="8xcy5y"
+let day = 2;
+
+switch(day){
+
+   case 1:
+      console.log("Monday");
+      break;
+
+   case 2:
+      console.log("Tuesday");
+      break;
+
+   case 3:
+      console.log("Wednesday");
+      break;
+
+   default:
+      console.log("Invalid Day");
+}
+```
+
+---
+
+# Output
+
+```javascript id="h74ycm"
+Tuesday
+```
+
+---
+
+# Importance of break
+
+Without `break`, execution continues to next cases.
+
+Example:
+
+```javascript id="76vl5r"
+let x = 1;
+
+switch(x){
+
+   case 1:
+      console.log("One");
+
+   case 2:
+      console.log("Two");
+}
+```
+
+---
+
+# Output
+
+```javascript id="xlxv4f"
+One
+Two
+```
+
+This is called **fall-through behavior**.
+
+---
+
+# Advantages of switch
+
+* Cleaner than else-if ladder
+* Easy to read
+* Faster in some cases
+
+---
+
+# Limitations
+
+* Mostly used for exact values
+* Cannot handle complex conditions easily
+
+---
+
+# Loops in JavaScript
+
+## Definition
+
+Loops are used to execute a block of code repeatedly until a condition becomes false.
+
+---
+
+# Advantages of Loops
+
+* Reduces code repetition
+* Saves time
+* Makes programs shorter
+* Improves efficiency
+
+---
+
+# Types of Loops
+
+1. for Loop
+2. while Loop
+3. do-while Loop
+
+---
+
+# 6. for Loop
+
+## Definition
+
+The `for` loop is used when the number of iterations is known.
+
+---
+
+# Syntax
+
+```javascript id="j0cm0k"
+for(initialization; condition; increment/decrement){
+
+   // code
+}
+```
+
+---
+
+# Components
+
+| Part                | Purpose               |
+| ------------------- | --------------------- |
+| Initialization      | Starting value        |
+| Condition           | Checks loop condition |
+| Increment/Decrement | Updates variable      |
+
+---
+
+# Working
+
+1. Initialization executes once
+2. Condition checked
+3. Code executes
+4. Increment/decrement occurs
+5. Process repeats
+
+---
+
+# Example
+
+```javascript id="d7tn86"
+for(let i = 1; i <= 5; i++){
+
+   console.log(i);
+}
+```
+
+---
+
+# Output
+
+```javascript id="bf3r5w"
+1
+2
+3
+4
+5
+```
+
+---
+
+# Infinite Loop Example
+
+```javascript id="tb89d3"
+for(;;){
+   console.log("Infinite");
+}
+```
+
+---
+
+# Advantages
+
+* Compact syntax
+* Best for counting loops
+* Easy iteration control
+
+---
+
+# 7. while Loop
+
+## Definition
+
+The `while` loop executes code while the condition remains true.
+
+---
+
+# Syntax
+
+```javascript id="lkgof0"
+while(condition){
+
+   // code
+}
+```
+
+---
+
+# Working
+
+* Condition checked first
+* If true → code executes
+* Repeats until condition becomes false
+
+---
+
+# Example
+
+```javascript id="rq5m3p"
+let i = 1;
+
+while(i <= 5){
+
+   console.log(i);
+   i++;
+}
+```
+
+---
+
+# Output
+
+```javascript id="7ahf2z"
+1
+2
+3
+4
+5
+```
+
+---
+
+# Characteristics
+
+* Entry-controlled loop
+* May execute zero times
+
+---
+
+# Infinite while Loop
+
+```javascript id="bdz0rw"
+while(true){
+   console.log("Running");
+}
+```
+
+---
+
+# Advantages
+
+* Good for unknown iterations
+* Simple condition checking
+
+---
+
+# Disadvantages
+
+* Risk of infinite loop
+* Manual increment required
+
+---
+
+# 8. do-while Loop
+
+## Definition
+
+The `do-while` loop executes code at least once before checking the condition.
+
+---
+
+# Syntax
+
+```javascript id="sn1wmo"
+do{
+
+   // code
+
+}while(condition);
+```
+
+---
+
+# Working
+
+1. Code executes first
+2. Condition checked later
+3. Repeats if condition is true
+
+---
+
+# Example
+
+```javascript id="m01rgs"
+let i = 1;
+
+do{
+
+   console.log(i);
+   i++;
+
+}while(i <= 5);
+```
+
+---
+
+# Output
+
+```javascript id="sn7ocd"
+1
+2
+3
+4
+5
+```
+
+---
+
+# Special Feature
+
+Even if condition is false initially, loop executes once.
+
+Example:
+
+```javascript id="7nqj4g"
+let x = 10;
+
+do{
+   console.log(x);
+}while(x < 5);
+```
+
+---
+
+# Output
+
+```javascript id="8c4gmo"
+10
+```
+
+---
+
+# Advantages
+
+* Executes at least once
+* Useful for menus and user input systems
+
+---
+
+# Difference Between while and do-while
+
+| while                   | do-while                |
+| ----------------------- | ----------------------- |
+| Condition checked first | Condition checked later |
+| May execute zero times  | Executes at least once  |
+| Entry-controlled        | Exit-controlled         |
+
+---
+
+# 9. break Statement
+
+## Definition
+
+The `break` statement immediately stops loop or switch execution.
+
+---
+
+# Syntax
+
+```javascript id="1m03ht"
+break;
+```
+
+---
+
+# Example with Loop
+
+```javascript id="i5bxqa"
+for(let i = 1; i <= 10; i++){
+
+   if(i == 5){
+      break;
+   }
+
+   console.log(i);
+}
+```
+
+---
+
+# Output
+
+```javascript id="sz4xyt"
+1
+2
+3
+4
+```
+
+---
+
+# Explanation
+
+Loop stops when `i` becomes 5.
+
+---
+
+# Uses of break
+
+* Exit loops early
+* Stop unnecessary execution
+* Menu-driven programs
+
+---
+
+# 10. continue Statement
+
+## Definition
+
+The `continue` statement skips the current iteration and moves to the next iteration.
+
+---
+
+# Syntax
+
+```javascript id="0j7q2f"
+continue;
+```
+
+---
+
+# Example
+
+```javascript id="fw3qkg"
+for(let i = 1; i <= 5; i++){
+
+   if(i == 3){
+      continue;
+   }
+
+   console.log(i);
+}
+```
+
+---
+
+# Output
+
+```javascript id="uhuw1d"
+1
+2
+4
+5
+```
+
+---
+
+# Explanation
+
+When `i` becomes 3:
+
+* `continue` skips printing
+* Loop continues with next iteration
+
+---
+
+# Difference Between break and continue
+
+| break                 | continue            |
+| --------------------- | ------------------- |
+| Stops entire loop     | Skips one iteration |
+| Exits loop completely | Continues loop      |
+| Used to terminate     | Used to skip        |
+
+---
+
+# Summary
+
+Control statements are essential in JavaScript because they control program execution and decision-making.
+Conditional statements help programs choose actions based on conditions, while loops repeat tasks efficiently.
+Jump statements like `break` and `continue` improve loop control and execution management.
