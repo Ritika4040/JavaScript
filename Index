@@ -1,0 +1,137 @@
+# JavaScript Index
+
+1. Introduction to JavaScript
+2. History of JavaScript
+3. Features of JavaScript
+4. Applications of JavaScript
+5. Advantages and Limitations of JavaScript
+6. JavaScript Execution Environment
+7. Installing and Setting Up Environment
+8. JavaScript Syntax
+9. Variables in JavaScript
+10. Data Types
+11. Operators in JavaScript
+12. Type Conversion
+13. Input and Output in JavaScript
+14. Comments in JavaScript
+
+## Control Statements
+
+15. Conditional Statements
+16. if Statement
+17. if-else Statement
+18. else-if Ladder
+19. switch Statement
+20. Loops in JavaScript
+21. for Loop
+22. while Loop
+23. do-while Loop
+24. break Statement
+25. continue Statement
+
+## Functions
+
+26. Introduction to Functions
+27. Function Declaration
+28. Function Expression
+29. Arrow Functions
+30. Parameters and Arguments
+31. Return Statement
+32. Scope in JavaScript
+33. Closures
+34. Callback Functions
+35. Higher-Order Functions
+36. Recursion
+
+## Arrays and Strings
+
+37. Arrays in JavaScript
+38. Array Methods
+39. Multidimensional Arrays
+40. Strings in JavaScript
+41. String Methods
+42. Template Literals
+
+## Objects
+
+43. Introduction to Objects
+44. Object Properties and Methods
+45. this Keyword
+46. Constructor Functions
+47. Prototypes
+48. Classes and Objects
+49. Inheritance
+50. Encapsulation
+51. Polymorphism
+
+## DOM Manipulation
+
+52. Introduction to DOM
+53. Selecting Elements
+54. Modifying Elements
+55. Event Handling
+56. Event Listeners
+57. Forms and Validation
+58. DOM Traversal
+59. Creating and Removing Elements
+
+## Advanced JavaScript
+
+60. Error Handling
+61. try, catch, finally
+62. JSON in JavaScript
+63. Local Storage and Session Storage
+64. Timing Functions
+65. setTimeout()
+66. setInterval()
+67. Promises
+68. async and await
+69. Fetch API
+70. AJAX
+
+## ES6 Features
+
+71. let and const
+72. Destructuring
+73. Spread Operator
+74. Rest Parameters
+75. Modules in JavaScript
+76. Default Parameters
+77. Optional Chaining
+78. Nullish Coalescing
+
+## Browser Object Model (BOM)
+
+79. Window Object
+80. Navigator Object
+81. Screen Object
+82. Location Object
+83. History Object
+
+## JavaScript in Web Development
+
+84. JavaScript with HTML
+85. JavaScript with CSS
+86. Form Validation using JavaScript
+87. Dynamic Web Pages
+88. Introduction to APIs
+89. Working with REST APIs
+90. Introduction to Node.js
+91. Introduction to Express.js
+
+## Debugging and Best Practices
+
+92. Debugging JavaScript
+93. Browser Developer Tools
+94. Code Optimization
+95. Best Practices in JavaScript
+96. Security in JavaScript
+
+## Modern JavaScript Frameworks
+
+97. Introduction to React
+98. Introduction to Angular
+99. Introduction to Vue.js
+100. Future of JavaScript
+
+
