@@ -1,0 +1,32 @@
+# Advantages of JavaScript
+
+* Easy to learn and use
+* Fast execution in browsers
+* Makes web pages interactive
+* Supported by all modern browsers
+* Platform independent
+* Reduces server load
+* Supports client-side scripting
+* Used for frontend and backend development
+* Large community support
+* Rich libraries and frameworks available
+* Supports asynchronous programming
+* Easy integration with HTML and CSS
+* Helps create dynamic web applications
+* Open-source language
+* Lightweight programming language
+
+---
+
+# Limitations of JavaScript
+
+* Security issues in client-side scripting
+* Different browser behaviors may cause compatibility issues
+* Cannot directly access system files
+* Debugging can be difficult sometimes
+* Slower than compiled languages
+* Single-threaded language
+* Code can be visible to users in browsers
+* Limited multithreading support
+* Dependent on browser support
+* Large applications can become complex to manage
