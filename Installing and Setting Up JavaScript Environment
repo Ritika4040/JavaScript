@@ -1,0 +1,514 @@
+# Installing and Setting Up JavaScript Environment
+
+# Introduction
+
+Before writing JavaScript programs, we need to install and configure a proper development environment.
+A JavaScript environment includes:
+
+* Web Browser
+* Code Editor
+* Runtime Environment
+* Development Tools
+
+These tools help developers:
+
+* Write code
+* Run programs
+* Debug errors
+* Build applications efficiently
+
+---
+
+# Requirements for JavaScript Development
+
+To start JavaScript programming, the following tools are commonly required:
+
+1. Web Browser
+2. Code Editor
+3. JavaScript Runtime
+4. Terminal or Command Prompt
+
+---
+
+# 1. Installing a Web Browser
+
+## Introduction
+
+JavaScript runs mainly inside web browsers.
+Modern browsers already include built-in JavaScript engines.
+
+Popular browsers:
+
+* Google Chrome
+* Mozilla Firefox
+* Microsoft Edge
+* Safari
+
+---
+
+## Recommended Browser
+
+Google Chrome is widely used because:
+
+* Fast JavaScript engine (V8)
+* Good debugging tools
+* Better developer support
+
+---
+
+## Steps to Install Google Chrome
+
+### Step 1
+
+Visit the official website:
+
+[Google Chrome Official Website](https://www.google.com/chrome/?utm_source=chatgpt.com)
+
+### Step 2
+
+Download the installer.
+
+### Step 3
+
+Run the setup file.
+
+### Step 4
+
+Complete installation.
+
+---
+
+# 2. Using Browser Developer Tools
+
+## Introduction
+
+Browsers provide Developer Tools for testing and debugging JavaScript.
+
+---
+
+## Opening Developer Tools
+
+### In Chrome
+
+* Press `F12`
+  OR
+* Right-click → Inspect
+
+---
+
+## Important Tabs
+
+| Tab      | Purpose             |
+| -------- | ------------------- |
+| Console  | Run JavaScript code |
+| Elements | Inspect HTML/CSS    |
+| Network  | Monitor requests    |
+| Sources  | Debug JavaScript    |
+
+---
+
+## Running JavaScript in Console
+
+### Example
+
+```javascript id="q8w4p1"
+console.log("Hello JavaScript");
+```
+
+### Output
+
+```text id="d6t2m9"
+Hello JavaScript
+```
+
+---
+
+# 3. Installing a Code Editor
+
+# Introduction
+
+A code editor helps developers:
+
+* Write code faster
+* Highlight syntax
+* Detect errors
+* Manage projects
+
+---
+
+# Popular JavaScript Editors
+
+| Editor             | Features                 |
+| ------------------ | ------------------------ |
+| Visual Studio Code | Lightweight and powerful |
+| Sublime Text       | Fast and simple          |
+| Atom               | Open-source editor       |
+| Notepad++          | Beginner-friendly        |
+
+---
+
+# Installing Visual Studio Code
+
+## Step 1
+
+Visit official website:
+
+[Visual Studio Code Official Website](https://code.visualstudio.com/?utm_source=chatgpt.com)
+
+---
+
+## Step 2
+
+Download VS Code for your operating system.
+
+---
+
+## Step 3
+
+Run the installer.
+
+---
+
+## Step 4
+
+Launch VS Code after installation.
+
+---
+
+# Creating First JavaScript File
+
+## Steps
+
+### Step 1
+
+Open VS Code.
+
+### Step 2
+
+Create a new folder.
+
+Example:
+
+```text id="k9l4z7"
+JavaScript_Project
+```
+
+---
+
+### Step 3
+
+Create a new file.
+
+Example:
+
+```text id="s5n8x2"
+app.js
+```
+
+---
+
+### Step 4
+
+Write JavaScript code.
+
+```javascript id="x4c7v1"
+console.log("JavaScript Setup Successful");
+```
+
+---
+
+# 4. Installing Node.js
+
+# Introduction
+
+Node.js allows JavaScript to run outside the browser.
+
+It is mainly used for:
+
+* Backend development
+* APIs
+* Server applications
+* Full-stack development
+
+---
+
+# Features of Node.js
+
+* Fast execution
+* Non-blocking operations
+* Uses V8 engine
+* Supports npm packages
+
+---
+
+# Steps to Install Node.js
+
+## Step 1
+
+Visit official website:
+
+[Node.js Official Website](https://nodejs.org/?utm_source=chatgpt.com)
+
+---
+
+## Step 2
+
+Download LTS (Long-Term Support) version.
+
+---
+
+## Step 3
+
+Run installer.
+
+---
+
+## Step 4
+
+Complete installation process.
+
+---
+
+# Verifying Node.js Installation
+
+Open terminal or command prompt.
+
+### Check Node.js Version
+
+```bash id="u7h3k5"
+node -v
+```
+
+### Example Output
+
+```text id="m3p8r6"
+v20.5.0
+```
+
+---
+
+# Verifying npm Installation
+
+npm is Node Package Manager.
+
+### Command
+
+```bash id="p4d7w1"
+npm -v
+```
+
+### Example Output
+
+```text id="n2b9q4"
+10.2.1
+```
+
+---
+
+# 5. Running JavaScript Programs
+
+# Method 1: Using Browser
+
+## Example HTML File
+
+```html id="r8y5u2"
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Example</title>
+</head>
+
+<body>
+
+<script>
+alert("Welcome to JavaScript");
+</script>
+
+</body>
+</html>
+```
+
+---
+
+## Steps
+
+1. Save file as `index.html`
+2. Open file in browser
+3. Browser executes JavaScript automatically
+
+---
+
+# Method 2: Using Node.js
+
+## Create JavaScript File
+
+```text id="f6x1m8"
+app.js
+```
+
+---
+
+## Add Code
+
+```javascript id="j9v4q3"
+console.log("Hello from Node.js");
+```
+
+---
+
+## Run Program
+
+Open terminal:
+
+```bash id="w1c5z8"
+node app.js
+```
+
+---
+
+## Output
+
+```text id="t3m9k7"
+Hello from Node.js
+```
+
+---
+
+# 6. JavaScript Project Structure
+
+## Basic Structure
+
+```text id="l8n2r4"
+project/
+│
+├── index.html
+├── style.css
+└── app.js
+```
+
+---
+
+# Explanation
+
+| File       | Purpose              |
+| ---------- | -------------------- |
+| index.html | Structure of webpage |
+| style.css  | Styling              |
+| app.js     | JavaScript logic     |
+
+---
+
+# 7. Adding JavaScript to HTML
+
+# Internal JavaScript
+
+JavaScript written inside HTML file.
+
+```html id="b2p7m5"
+<script>
+console.log("Internal JavaScript");
+</script>
+```
+
+---
+
+# External JavaScript
+
+JavaScript stored in separate `.js` file.
+
+```html id="q4n8t1"
+<script src="app.js"></script>
+```
+
+---
+
+# Advantages of External JavaScript
+
+* Better code organization
+* Easy maintenance
+* Reusable code
+* Faster page loading
+
+---
+
+# 8. Installing Useful VS Code Extensions
+
+## Recommended Extensions
+
+| Extension               | Purpose              |
+| ----------------------- | -------------------- |
+| JavaScript ES6 Snippets | Code shortcuts       |
+| Prettier                | Code formatting      |
+| Live Server             | Live webpage preview |
+| ESLint                  | Error checking       |
+
+---
+
+# Installing Extensions in VS Code
+
+## Steps
+
+1. Open VS Code
+2. Click Extensions icon
+3. Search extension name
+4. Click Install
+
+---
+
+# 9. Using Live Server
+
+# Introduction
+
+Live Server automatically refreshes webpage when code changes.
+
+---
+
+# Steps
+
+1. Install Live Server extension
+2. Open HTML file
+3. Right-click → Open with Live Server
+
+---
+
+# Advantages of Proper Environment Setup
+
+* Faster development
+* Better debugging
+* Improved productivity
+* Organized coding
+* Easy project management
+
+---
+
+# Common Problems During Setup
+
+| Problem                  | Solution                    |
+| ------------------------ | --------------------------- |
+| Node command not working | Restart terminal            |
+| Browser not loading JS   | Check script path           |
+| Syntax errors            | Use ESLint                  |
+| File not running         | Save with correct extension |
+
+---
+
+# Best Practices
+
+* Use latest stable versions
+* Organize project folders properly
+* Use external JavaScript files
+* Install useful extensions
+* Practice debugging regularly
+
+---
+
+# Conclusion
+
+Installing and setting up a JavaScript environment is the first step toward JavaScript development.
+Using tools like:
+
+* Web Browsers
+* Visual Studio Code
+* Node.js
+
+helps developers create, test, debug, and manage JavaScript applications efficiently.
