@@ -1,0 +1,433 @@
+# JavaScript Execution Environment
+
+## Introduction
+
+A JavaScript Execution Environment is a platform where JavaScript code is executed.
+It provides all the necessary components and resources required to run JavaScript programs properly.
+
+JavaScript cannot run directly on the operating system. It needs an execution environment such as:
+
+* Web Browser
+* Node.js
+
+The execution environment helps JavaScript:
+
+* Execute code
+* Manage memory
+* Handle events
+* Perform asynchronous operations
+* Interact with external systems
+
+---
+
+# Types of JavaScript Execution Environment
+
+## 1. Browser Environment
+
+Browsers are the most common JavaScript execution environments.
+
+Popular browsers:
+
+* Google Chrome
+* Mozilla Firefox
+* Microsoft Edge
+* Safari
+
+Each browser contains a JavaScript engine that executes JavaScript code.
+
+---
+
+## JavaScript Engines in Browsers
+
+| Browser         | JavaScript Engine |
+| --------------- | ----------------- |
+| Google Chrome   | V8 Engine         |
+| Mozilla Firefox | SpiderMonkey      |
+| Safari          | JavaScriptCore    |
+| Microsoft Edge  | Chakra/V8         |
+
+---
+
+## Features of Browser Environment
+
+* Executes JavaScript inside web pages
+* Supports DOM manipulation
+* Handles user interactions
+* Provides Web APIs
+* Supports asynchronous programming
+
+---
+
+## Example of Browser Execution
+
+```html id="y6x5w1"
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="demo">Hello</h1>
+
+<script>
+document.getElementById("demo").innerHTML = "Welcome to JavaScript";
+</script>
+
+</body>
+</html>
+```
+
+### Explanation
+
+* Browser loads HTML page
+* JavaScript code executes inside `<script>` tag
+* DOM element content changes dynamically
+
+---
+
+# 2. Node.js Environment
+
+## Introduction
+
+Node.js is a runtime environment that allows JavaScript to run outside the browser.
+
+It is mainly used for:
+
+* Backend development
+* Server applications
+* APIs
+* Real-time applications
+
+---
+
+## Features of Node.js
+
+* Fast execution using V8 engine
+* File system access
+* Database connectivity
+* Event-driven architecture
+* Non-blocking I/O operations
+
+---
+
+## Example
+
+```javascript id="m9u7d2"
+console.log("Hello from Node.js");
+```
+
+### Output
+
+```text id="v3n2p8"
+Hello from Node.js
+```
+
+---
+
+# Components of JavaScript Execution Environment
+
+The JavaScript execution environment contains several important components.
+
+---
+
+# 1. JavaScript Engine
+
+## Definition
+
+A JavaScript engine is a program that converts JavaScript code into machine code and executes it.
+
+### Responsibilities
+
+* Parsing code
+* Compiling code
+* Executing code
+* Memory management
+
+---
+
+## Working of JavaScript Engine
+
+### Step 1: Parsing
+
+The engine reads the JavaScript code and checks syntax.
+
+### Step 2: Compilation
+
+The code is converted into machine-level instructions.
+
+### Step 3: Execution
+
+The machine code executes on the CPU.
+
+---
+
+# 2. Memory Heap
+
+## Definition
+
+Memory Heap is a storage area where variables and objects are stored.
+
+### Example
+
+```javascript id="x2c4f6"
+let name = "Ritika";
+```
+
+Here:
+
+* Variable `name` is stored in memory heap.
+
+---
+
+# 3. Call Stack
+
+## Definition
+
+The Call Stack manages function execution.
+
+It follows:
+
+# LIFO (Last In First Out)
+
+Functions are added to the stack when called and removed after execution.
+
+---
+
+## Example
+
+```javascript id="t8k1q4"
+function first() {
+    second();
+}
+
+function second() {
+    console.log("Hello");
+}
+
+first();
+```
+
+---
+
+## Execution Flow
+
+1. `first()` enters stack
+2. `second()` enters stack
+3. `console.log()` executes
+4. `second()` removed
+5. `first()` removed
+
+---
+
+# 4. Web APIs
+
+## Definition
+
+Web APIs are features provided by browsers to perform tasks outside JavaScript engine.
+
+Examples:
+
+* DOM API
+* setTimeout()
+* fetch()
+* localStorage
+* geolocation
+
+---
+
+## Example of setTimeout()
+
+```javascript id="c5j8r1"
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Executed Later");
+}, 2000);
+
+console.log("End");
+```
+
+### Output
+
+```text id="f4w9u3"
+Start
+End
+Executed Later
+```
+
+---
+
+## Explanation
+
+* `setTimeout()` handled by Web API
+* Callback waits for 2 seconds
+* Event Loop sends callback to Call Stack later
+
+---
+
+# 5. Callback Queue
+
+## Definition
+
+The Callback Queue stores callback functions waiting for execution.
+
+Examples:
+
+* Timer callbacks
+* Event handlers
+* API responses
+
+---
+
+# 6. Event Loop
+
+## Definition
+
+The Event Loop continuously checks:
+
+* Is Call Stack empty?
+* Are callbacks waiting?
+
+If the stack is empty:
+
+* Callback moves from queue to stack
+
+---
+
+# Execution Process in JavaScript
+
+## Step-by-Step Flow
+
+1. JavaScript code enters engine
+2. Memory allocation happens
+3. Functions added to Call Stack
+4. Async tasks handled by Web APIs
+5. Callbacks stored in Callback Queue
+6. Event Loop manages execution
+
+---
+
+# Synchronous Execution
+
+## Definition
+
+JavaScript executes code line by line in order.
+
+### Example
+
+```javascript id="q8l2n7"
+console.log("One");
+console.log("Two");
+console.log("Three");
+```
+
+### Output
+
+```text id="a7p3s1"
+One
+Two
+Three
+```
+
+---
+
+# Asynchronous Execution
+
+## Definition
+
+Asynchronous tasks execute independently without blocking other code.
+
+### Example
+
+```javascript id="r6t5m2"
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Async Task");
+}, 1000);
+
+console.log("End");
+```
+
+### Output
+
+```text id="u2b7k9"
+Start
+End
+Async Task
+```
+
+---
+
+# Why JavaScript is Single-Threaded
+
+JavaScript uses a single Call Stack, meaning:
+
+* One task executes at a time
+* Tasks are processed sequentially
+
+Asynchronous features make JavaScript efficient even with single-threaded architecture.
+
+---
+
+# Advantages of JavaScript Execution Environment
+
+* Fast execution
+* Dynamic web pages
+* Event-driven programming
+* Supports asynchronous operations
+* Efficient memory management
+* Cross-platform support
+
+---
+
+# Limitations
+
+* Single-threaded execution
+* Callback complexity
+* Browser compatibility issues
+* Memory leaks possible in large applications
+
+---
+
+# Importance of JavaScript Execution Environment
+
+The execution environment is essential because it:
+
+* Runs JavaScript code
+* Handles asynchronous tasks
+* Enables interaction with web pages
+* Provides APIs and runtime support
+* Improves application performance
+
+---
+
+# Real-Life Applications
+
+## Browser Environment
+
+* Web applications
+* Interactive websites
+* Online forms
+* Games
+
+## Node.js Environment
+
+* Backend servers
+* REST APIs
+* Chat applications
+* Real-time systems
+
+---
+
+# Conclusion
+
+The JavaScript Execution Environment is responsible for executing JavaScript programs efficiently.
+It includes components such as:
+
+* JavaScript Engine
+* Memory Heap
+* Call Stack
+* Web APIs
+* Event Loop
+* Callback Queue
+
+Together, these components help JavaScript perform synchronous and asynchronous operations smoothly in browsers and server-side applications.
