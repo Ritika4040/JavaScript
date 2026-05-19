@@ -1,0 +1,212 @@
+# Data Types in JavaScript
+
+JavaScript data types define the type of value a variable can store. JavaScript is a dynamically typed language,
+meaning the data type is automatically assigned when a value is stored in a variable. Data types help programmers
+perform operations correctly and manage data efficiently. JavaScript mainly has Primitive and Non-Primitive data types.
+Primitive types store single values, while non-primitive types store collections of data. Understanding data types is
+important for calculations, conditions, functions, and object handling in web development.
+
+---
+
+# 1. Number Data Type
+
+The Number data type in JavaScript is used to store numeric values such as integers and decimal numbers.
+JavaScript uses a single Number type for all numeric values. Numbers are commonly used in mathematical
+calculations, comparisons, billing systems, shopping carts, and scientific applications. Special values like 
+`Infinity` and `NaN` are also included in the Number type. Arithmetic operators such as `+`, `-`, `*`, `/`, and `%` 
+are used with numbers. The Number data type is one of the most frequently used data types in JavaScript programming 
+because calculations are required in almost every application.
+
+### Example
+
+```javascript id="3ef8aw"
+let age = 21;
+let price = 99.99;
+let total = age + price;
+
+document.write(total);
+```
+
+### Output
+
+```javascript id="zaj8s6"
+120.99
+```
+
+---
+
+# 2. String Data Type
+
+The String data type is used to store text values in JavaScript. Strings are written inside single quotes `' '`, double 
+quotes `" "`, or backticks `` ` ` ``. A string can contain alphabets, numbers, symbols, and spaces. Strings are used for 
+displaying names, messages, addresses, and user information on websites. JavaScript provides many built-in string methods 
+such as `length`, `toUpperCase()`, `toLowerCase()`, and `slice()`. Strings are immutable, meaning their original value cannot
+be changed directly after creation. The String data type is very important for user interaction and content display in web applications.
+
+### Example
+
+```javascript id="i0q5lx"
+let name = "Ritika";
+let message = "Welcome to JavaScript";
+
+document.write(name);
+document.write("<br>");
+document.write(message);
+```
+
+### Output
+
+```javascript id="lg0hl2"
+Ritika
+Welcome to JavaScript
+```
+
+---
+
+# 3. Boolean Data Type
+
+The Boolean data type stores only two values: `true` and `false`. It is mainly used in decision-making and conditional statements. 
+Boolean values help programs check whether a condition is correct or incorrect. They are commonly used in login systems, form 
+validation, and permission checking. Comparison operators such as `>`, `<`, `==`, and `===` return Boolean values. Logical
+operators like `&&`, `||`, and `!` also work with Booleans. This data type is important for controlling program flow and
+implementing logic in applications.
+
+### Example
+
+```javascript id="x7u4te"
+let isStudent = true;
+let isLoggedIn = false;
+
+document.write(isStudent);
+document.write("<br>");
+document.write(isLoggedIn);
+```
+
+### Output
+
+```javascript id="dpg8wj"
+true
+false
+```
+
+---
+
+# 4. Undefined Data Type
+
+The Undefined data type represents a variable that has been declared but not assigned any value. When a variable is created without
+initialization, JavaScript automatically assigns it the value `undefined`. This data type helps programmers identify missing or 
+incomplete data. Functions without return values also return undefined. Undefined is different from null because undefined means
+“value not assigned,” while null means “empty value assigned intentionally.” Understanding undefined helps avoid runtime errors and 
+improves debugging in applications.
+
+### Example
+
+```javascript id="d6k2mn"
+let marks;
+
+document.write(marks);
+```
+
+### Output
+
+```javascript id="n5ub7m"
+undefined
+```
+
+---
+
+# 5. Null Data Type
+
+The Null data type represents an intentional absence of value. Programmers use `null` when they want to clear or reset a
+variable value. It is commonly used in databases, APIs, and object handling. Unlike undefined, null is assigned intentionally
+by the developer. Null helps indicate that data is empty or unavailable. Although JavaScript shows null as an object internally,
+it is considered a primitive data type. Proper use of null improves memory management and application reliability.
+
+### Example
+
+```javascript id="1m8wya"
+let account = null;
+
+document.write(account);
+```
+
+### Output
+
+```javascript id="hxyo09"
+null
+```
+
+---
+
+# 6. BigInt Data Type
+
+The BigInt data type is used to store very large integer values that cannot be handled safely by the normal Number type.
+BigInt values are written by adding `n` at the end of a number. This data type is useful in scientific calculations,
+cryptography, banking systems, and large databases where very large numbers are required. BigInt prevents precision loss during 
+calculations involving huge integers. However, BigInt values cannot be mixed directly with regular numbers in operations.
+
+### Example
+
+```javascript id="l05vr5"
+let bigNumber = 12345678901234567890n;
+
+document.write(bigNumber);
+```
+
+### Output
+
+```javascript id="9z23lj"
+12345678901234567890
+```
+
+---
+
+# 7. Symbol Data Type
+
+The Symbol data type is used to create unique identifiers in JavaScript. Every symbol created is unique even if the 
+descriptions are the same. Symbols are mainly used in objects to avoid duplicate property names. They improve security and 
+reliability in object handling. Symbols are created using the `Symbol()` function. This data type is commonly used in advanced 
+JavaScript programming and framework development. Symbols help developers create hidden or private object properties.
+
+### Example
+
+```javascript id="tzh4a8"
+let id = Symbol("id");
+
+document.write(id.toString());
+```
+
+### Output
+
+```javascript id="08jn3y"
+Symbol(id)
+```
+
+---
+
+# 8. Object Data Type
+
+The Object data type is a non-primitive data type used to store collections of data as key-value pairs. Objects can contain
+properties and methods that represent real-world entities such as students, employees, products, and cars. JavaScript objects 
+are flexible because properties can be added or removed dynamically. Arrays and functions are also considered objects in JavaScript.
+Objects are widely used in APIs, databases, and web applications because they help organize and manage complex data efficiently.
+
+### Example
+
+```javascript id="qu0k8j"
+let student = {
+    name: "Ritika",
+    age: 21
+};
+
+document.write(student.name);
+document.write("<br>");
+document.write(student.age);
+```
+
+### Output
+
+```javascript id="ltq7ta"
+Ritika
+21
+```
