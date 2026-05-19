@@ -1,0 +1,40 @@
+# JavaScript Syntax
+
+JavaScript syntax refers to the set of rules used to write JavaScript programs correctly. It defines how statements,
+variables, functions, operators, and other elements are written and organized in code. JavaScript is a case-sensitive
+language, which means variables like `name` and `Name` are treated as different identifiers. Every JavaScript statement 
+is usually written line by line and can end with a semicolon, although semicolons are optional in many cases. JavaScript
+code can be written directly inside HTML using the `<script>` tag or in separate `.js` files. Curly braces `{}` are used
+to define blocks of code such as loops and functions. Comments are also part of syntax and are used to explain code for 
+better readability. Single-line comments use `//` while multi-line comments use `/* */`. JavaScript supports keywords like
+`var`, `let`, `const`, `if`, `for`, and `function` which have special meanings in the language. Correct syntax is important
+because even a small mistake can generate errors and stop the program from executing properly. JavaScript syntax forms the 
+foundation for creating interactive and dynamic web applications.
+
+```javascript id="sxv2q3"
+<script>
+    document.write("Hello JavaScript");
+</script>
+```
+
+---
+
+# Variables in JavaScript
+
+Variables in JavaScript are used to store data values that can be used and modified during program execution. 
+A variable acts like a container that holds information such as numbers, text, or boolean values. JavaScript provides 
+three keywords for declaring variables: `var`, `let`, and `const`. The `var` keyword is the older method of variable declaration
+and has function scope. The `let` keyword is used for block-scoped variables and is preferred in modern JavaScript programming. 
+The `const` keyword is used to declare constant variables whose values cannot be reassigned after initialization. Variable names in
+JavaScript are case-sensitive and should start with a letter, underscore `_`, or dollar sign `$`. Variables make programs dynamic
+because values can change based on user input or calculations. Proper variable naming improves code readability and maintenance. 
+JavaScript variables can store different data types such as strings, numbers, arrays, objects, and functions. Variables are essential 
+in programming because they help manage and manipulate data efficiently in web applications and software development.
+
+```javascript id="d4m8ka"
+let name = "Ritika";
+let age = 21;
+
+document.write(name);
+document.write(age);
+```
