@@ -1,0 +1,87 @@
+## Type Conversion
+
+Type Conversion is the process of changing one data type into another data type in programming languages.'
+It allows a program to convert values such as strings, integers, floating-point numbers, and Boolean 
+values into a different format according to requirements. Type conversion is important because different
+operations require different data types. For example, mathematical calculations need numeric values, 
+while displaying information may require text values. Without conversion, programs may produce errors 
+or unexpected results.
+
+There are two main types of type conversion:
+
+### 1. Implicit Type Conversion (Automatic Conversion)
+
+Implicit conversion is performed automatically by the programming language without requiring user intervention.
+It occurs when a smaller data type is converted into a larger compatible type to avoid data loss.
+
+**Example:**
+
+```javascript
+let num = 10;
+let result = num + 5.5;
+console.log(result);
+```
+
+**Output:**
+
+```javascript
+15.5
+```
+
+Here, the integer value `10` is automatically converted into a floating-point number.
+
+---
+
+### 2. Explicit Type Conversion (Manual Conversion)
+
+Explicit conversion is performed by the programmer using conversion functions. It is also called type casting. This method 
+is used when the programmer wants precise control over the conversion process.
+
+**Common JavaScript conversion functions:**
+
+* `Number()` → Converts value into number
+* `String()` → Converts value into string
+* `Boolean()` → Converts value into Boolean
+* `parseInt()` → Converts string to integer
+* `parseFloat()` → Converts string to decimal value
+
+**Example:**
+
+```javascript
+let value = "100";
+let number = Number(value);
+
+console.log(number);
+console.log(typeof number);
+```
+
+**Output:**
+
+```javascript
+100
+number
+```
+
+### Advantages of Type Conversion
+
+* Improves data compatibility
+* Supports calculations and operations
+* Reduces errors in programs
+* Makes data processing easier
+* Increases flexibility in programming
+
+### Example of Type Conversion
+
+```javascript
+let age = "20";
+
+console.log(Number(age) + 5);
+```
+
+**Output:**
+
+```javascript
+25
+```
+
+In this example, the string `"20"` is converted into a number before performing addition.
