@@ -1,0 +1,92 @@
+## Conditional Statements
+
+Conditional Statements in JavaScript are used to make decisions in a program based on certain conditions.
+They control the flow of execution by checking whether a condition is true or false. If the condition is 
+true, a particular block of code executes; otherwise, another block may execute. These statements make programs
+interactive and allow applications to respond differently according to user input or situations.
+
+Conditional statements are widely used in real-life applications such as login systems, online forms, ATM systems,
+grading systems, ticket booking systems, and e-commerce websites. They help developers create dynamic programs that 
+can handle multiple situations efficiently. JavaScript provides several conditional statements to perform 
+decision-making operations.
+
+### Types of Conditional Statements
+
+### 1. if Statement
+
+The `if` statement is the simplest conditional statement in JavaScript. It executes a block of code only when the given
+condition is true. If the condition becomes false, the code inside the block will not execute. It is mainly used when
+only one condition needs to be checked.
+
+**Example:**
+
+```javascript id="s5s3cr"
+if(age>=18)
+console.log("Eligible");
+```
+
+---
+
+### 2. if...else Statement
+
+The `if...else` statement is used when there are two possible outcomes. If the condition is true, one block executes; otherwise,
+another block executes. It helps programmers handle both positive and negative conditions.
+
+**Example:**
+
+```javascript id="bxwwso"
+if(age>=18)
+console.log("Adult");
+else
+console.log("Minor");
+```
+
+---
+
+### 3. else if Statement
+
+The `else if` statement is used when multiple conditions need to be checked one after another. It allows 
+programs to choose from several alternatives and execute only one matching condition.
+
+**Example:**
+
+```javascript id="n1b50d"
+if(marks>=90)
+console.log("A");
+else if(marks>=70)
+console.log("B");
+```
+
+---
+
+### 4. switch Statement
+
+The `switch` statement is used when a program has many choices or options. It compares a value with multiple
+cases and executes the matching block of code. It is easier to read than multiple `if...else` statements.
+
+**Example:**
+
+```javascript id="f0vwmq"
+switch(day){
+case 1:
+console.log("Monday");
+}
+```
+
+### Advantages of Conditional Statements
+
+* Helps in decision making
+* Controls program execution flow
+* Makes applications interactive
+* Handles multiple conditions easily
+* Improves flexibility of programs
+* Used in real-world applications
+
+### Applications of Conditional Statements
+
+* User login systems
+* Student grading systems
+* ATM applications
+* Form validation
+* Online shopping websites
+* Game development programs
