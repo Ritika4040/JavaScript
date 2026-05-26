@@ -1,0 +1,67 @@
+## if Statement
+
+The `if` statement is the simplest conditional statement in JavaScript. It is used to execute a block
+of code only when a specified condition is true. If the condition evaluates to false, the code inside
+the `if` block will not execute. It helps programmers make decisions within a program and control the 
+flow of execution. The `if` statement is useful when a program needs to check only one condition before
+performing an action. It is commonly used in login systems, age verification, result checking, and form 
+validation. This statement makes applications more interactive by allowing different actions based on conditions. 
+The condition inside an `if` statement generally uses comparison operators such as `>`, `<`, `==`, `!=`, `>=`, and `<=`.
+
+**Example:**
+
+```javascript
+if(age >= 18)
+console.log("Eligible to vote");
+```
+
+### Advantages of if Statement
+
+* Simple and easy to understand
+* Used for decision-making in programs
+* Improves program control flow
+* Useful for checking a single condition
+* Makes applications interactive
+
+### Disadvantages of if Statement
+
+* Checks only one condition effectively
+* Not suitable for multiple conditions
+* Can make programs lengthy if used repeatedly
+* May reduce readability in complex logic
+
+---
+
+## if-else Statement
+
+The `if-else` statement is used when there are two possible outcomes in a program. It executes one block of code if 
+the condition is true and another block if the condition is false. This statement helps programs handle both situations
+effectively and improves decision-making capabilities. The `if-else` statement is widely used in applications where
+different actions are required based on user input or specific conditions. Examples include checking whether a number
+is even or odd, determining pass or fail status, and user authentication systems. It makes programs flexible and easier
+to understand because all possible outcomes are clearly defined. The `else` part acts as an alternative path when the 
+main condition is not satisfied.
+
+**Example:**
+
+```javascript
+if(age >= 18)
+console.log("Adult");
+else
+console.log("Minor");
+```
+
+### Advantages of if-else Statement
+
+* Handles two possible conditions easily
+* Improves program decision-making
+* Makes code more organized
+* Helps in controlling execution flow
+* Easy to understand and implement
+
+### Disadvantages of if-else Statement
+
+* Becomes difficult with many conditions
+* Large nested structures reduce readability
+* Can make code lengthy
+* Complex logic becomes harder to manage
