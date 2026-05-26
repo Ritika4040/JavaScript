@@ -1,0 +1,74 @@
+## else-if Ladder
+
+The `else-if Ladder` statement in JavaScript is used when multiple conditions need to be checked one after another. 
+It is an extension of the `if-else` statement and allows the program to choose one block of code from several 
+conditions. The conditions are checked from top to bottom. If the first condition is false, the program checks 
+the next condition, and this process continues until a true condition is found. If none of the conditions are 
+true, the `else` block executes. Only one block of code executes even if multiple conditions are true. 
+The else-if ladder is commonly used in grading systems, menu-based programs, result processing systems, and 
+decision-making applications. It helps organize multiple conditions in a structured way and makes programs
+more flexible.
+
+**Example:**
+
+```javascript id="msibp6"
+if(marks>=90)
+console.log("Grade A");
+else if(marks>=70)
+console.log("Grade B");
+else
+console.log("Grade C");
+```
+
+### Advantages of else-if Ladder
+
+* Handles multiple conditions easily
+* Improves decision-making in programs
+* Makes code organized and structured
+* Suitable for complex conditions
+* Easy to understand and implement
+
+### Disadvantages of else-if Ladder
+
+* Becomes lengthy with many conditions
+* Reduces readability in large programs
+* Execution may become slower due to multiple checks
+* Difficult to maintain in complex applications
+
+---
+
+## switch Statement
+
+The `switch` statement in JavaScript is used to select one block of code from multiple choices. It compares a given 
+expression with different cases and executes the matching case. The `switch` statement is an alternative to long 
+`if-else-if` statements and makes code easier to read. Each case contains a value and corresponding code. The `break` 
+statement is used to stop execution after finding the correct case. If no case matches, the `default` statement executes.
+Switch statements are commonly used in menu-driven programs, calculator applications, day selection systems, and user 
+interface controls. They simplify multiple comparisons and improve code readability.
+
+**Example:**
+
+```javascript id="4m7q34"
+switch(day){
+case 1:
+console.log("Monday");
+break;
+default:
+console.log("Invalid");
+}
+```
+
+### Advantages of switch Statement
+
+* Easy to read and understand
+* Reduces lengthy if-else statements
+* Handles multiple options efficiently
+* Improves program structure
+* Faster for multiple fixed values
+
+### Disadvantages of switch Statement
+
+* Works mainly with fixed values
+* Cannot handle complex conditions easily
+* Large switch statements become difficult to manage
+* Less flexible than if-else conditions
