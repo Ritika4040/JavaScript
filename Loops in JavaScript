@@ -1,0 +1,395 @@
+# Loops in JavaScript
+
+Loops are used to execute a block of code repeatedly until a specified condition becomes false. They help reduce code repetition, improve 
+efficiency, and make programs easier to maintain. JavaScript provides different types of loops such as **for**, **while**, and **do-while**. 
+Control statements like **break** and **continue** are used to modify loop execution.
+
+---
+
+# 21. for Loop
+
+The **for loop** is one of the most commonly used loops in JavaScript. It is used when the number of iterations is known before execution.
+A for loop consists of three parts: initialization, condition, and update expression. During each iteration, the condition is checked;
+if it is true, the loop body executes, and then the update expression runs. This process continues until the condition becomes false.
+
+The for loop is widely used for traversing arrays, generating sequences, performing calculations, and repeating tasks. Since all loop 
+control statements are written in one place, the code becomes easier to read and manage.
+
+### Syntax
+
+```javascript
+for(initialization; condition; increment/decrement) {
+    // code block
+}
+```
+
+### Example
+
+```javascript
+for(let i = 1; i <= 5; i++) {
+    console.log("Number:", i);
+}
+```
+
+### Output
+
+```text
+Number: 1
+Number: 2
+Number: 3
+Number: 4
+Number: 5
+```
+
+### Applications
+
+* Printing numbers
+* Array traversal
+* Generating tables
+* Repeating calculations
+* Pattern programs
+
+### Advantages
+
+* Compact and easy to read.
+* Suitable for fixed iterations.
+* Loop control is centralized.
+
+### Disadvantages
+
+* Less useful when iterations are unknown.
+* Complex conditions can reduce readability.
+
+---
+
+# 22. while Loop
+
+The **while loop** repeatedly executes a block of code as long as a specified condition remains true. The condition is evaluated 
+before each iteration. If the condition is false initially, the loop body will not execute even once.
+
+This loop is useful when the number of iterations is not known in advance and depends on runtime conditions. It is commonly used in user
+input validation, menu-driven applications, and data processing tasks.
+
+### Syntax
+
+```javascript
+while(condition) {
+    // code block
+}
+```
+
+### Example
+
+```javascript
+let i = 1;
+
+while(i <= 5) {
+    console.log(i);
+    i++;
+}
+```
+
+### Output
+
+```text
+1
+2
+3
+4
+5
+```
+
+### Applications
+
+* Reading user input
+* Validation processes
+* Event-driven programs
+* Condition-based repetition
+
+### Advantages
+
+* Suitable for unknown iterations.
+* Simple structure.
+* Flexible execution control.
+
+### Disadvantages
+
+* Can create infinite loops.
+* Initialization and increment are separate.
+
+---
+
+# 23. do-while Loop
+
+The **do-while loop** is similar to the while loop, but it guarantees that the loop body executes at least once. The condition is checked 
+after the execution of the loop body. Even if the condition is false, the code inside the loop runs one time.
+
+This loop is useful in situations where the user must perform an action before validation occurs, such as displaying menus, accepting user 
+input, or confirmation dialogs.
+
+### Syntax
+
+```javascript
+do {
+    // code block
+} while(condition);
+```
+
+### Example
+
+```javascript
+let i = 1;
+
+do {
+    console.log(i);
+    i++;
+} while(i <= 5);
+```
+
+### Output
+
+```text
+1
+2
+3
+4
+5
+```
+
+### Example Showing One-Time Execution
+
+```javascript
+let num = 10;
+
+do {
+    console.log("Executed Once");
+} while(num < 5);
+```
+
+### Output
+
+```text
+Executed Once
+```
+
+### Applications
+
+* Menu-driven systems
+* Password validation
+* Input collection
+* User interaction programs
+
+### Advantages
+
+* Executes at least once.
+* Useful for validation tasks.
+* Simple to implement.
+
+### Disadvantages
+
+* May execute unnecessarily.
+* Can create infinite loops if not controlled.
+
+---
+
+# 24. break Statement
+
+The **break statement** is used to terminate a loop immediately when a specific condition is met. When JavaScript encounters a break statement,
+it exits the loop and transfers control to the next statement following the loop.
+
+The break statement is often used when searching for an item, handling errors, or stopping execution after a desired result is found.
+
+### Syntax
+
+```javascript
+break;
+```
+
+### Example
+
+```javascript
+for(let i = 1; i <= 10; i++) {
+
+    if(i === 6) {
+        break;
+    }
+
+    console.log(i);
+}
+```
+
+### Output
+
+```text
+1
+2
+3
+4
+5
+```
+
+### Real-Life Example
+
+Searching for a product in a list:
+
+```javascript
+let products = ["Laptop", "Phone", "Tablet"];
+
+for(let i = 0; i < products.length; i++) {
+
+    if(products[i] === "Phone") {
+        console.log("Product Found");
+        break;
+    }
+}
+```
+
+### Advantages
+
+* Saves execution time.
+* Improves performance.
+* Useful in searching and validation.
+
+### Disadvantages
+
+* Excessive use can reduce readability.
+* May make logic harder to follow.
+
+---
+
+# 25. continue Statement
+
+The **continue statement** skips the current iteration of a loop and immediately moves to the next iteration. Unlike break, it does not 
+terminate the loop. It is useful when certain values or conditions need to be ignored during processing.
+
+The continue statement helps simplify code by avoiding deeply nested if statements.
+
+### Syntax
+
+```javascript
+continue;
+```
+
+### Example
+
+```javascript
+for(let i = 1; i <= 5; i++) {
+
+    if(i === 3) {
+        continue;
+    }
+
+    console.log(i);
+}
+```
+
+### Output
+
+```text
+1
+2
+4
+5
+```
+
+### Example – Print Even Numbers Only
+
+```javascript
+for(let i = 1; i <= 10; i++) {
+
+    if(i % 2 !== 0) {
+        continue;
+    }
+
+    console.log(i);
+}
+```
+
+### Output
+
+```text
+2
+4
+6
+8
+10
+```
+
+### Applications
+
+* Filtering records
+* Ignoring invalid data
+* Processing selected values
+* Data validation
+
+### Advantages
+
+* Makes code cleaner.
+* Skips unwanted iterations.
+* Useful for filtering conditions.
+
+### Disadvantages
+
+* Overuse can reduce readability.
+* Can make debugging difficult.
+
+---
+
+# Difference Between while and do-while
+
+| Feature            | while Loop         | do-while Loop                   |
+| ------------------ | ------------------ | ------------------------------- |
+| Condition Check    | Before execution   | After execution                 |
+| Minimum Execution  | 0 times            | 1 time                          |
+| Suitable For       | Unknown iterations | At least one execution required |
+| Entry/Exit Control | Entry-controlled   | Exit-controlled                 |
+
+---
+
+# Difference Between break and continue
+
+| Feature          | break                       | continue                   |
+| ---------------- | --------------------------- | -------------------------- |
+| Function         | Stops loop completely       | Skips current iteration    |
+| Loop Execution   | Terminates loop             | Continues loop             |
+| Control Transfer | Outside loop                | Next iteration             |
+| Usage            | Searching, stopping process | Filtering, skipping values |
+
+---
+
+# Key Points for Interviews
+
+* **for loop** is used when the number of iterations is known.
+* **while loop** is used when iterations depend on a condition.
+* **do-while loop** executes at least once.
+* **break** terminates loop execution immediately.
+* **continue** skips the current iteration.
+* Infinite loops occur when the loop condition never becomes false.
+* Loops improve code reusability and reduce redundancy.
+* JavaScript supports nested loops (a loop inside another loop).
+
+### Nested Loop Example
+
+```javascript
+for(let i = 1; i <= 3; i++) {
+
+    for(let j = 1; j <= 2; j++) {
+
+        console.log(i, j);
+
+    }
+}
+```
+
+### Output
+
+```text
+1 1
+1 2
+2 1
+2 2
+3 1
+3 2
+```
+
+These loop concepts are among the most frequently asked JavaScript interview and practical programming topics.
