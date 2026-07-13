@@ -1,0 +1,664 @@
+# Objects in JavaScript
+
+## Introduction
+
+Objects are one of the most important and powerful features of JavaScript. Almost everything in JavaScript is an object or behaves like one.
+Objects allow developers to store related data and functions together, making programs more organized, reusable, and easier to maintain.
+
+An object is a collection of **key-value pairs**, where the key is called a **property** and the value can be any data type, including another 
+object or a function. Functions stored inside an object are known as **methods**.
+
+Objects are widely used in web development to represent real-world entities such as users, products, employees, vehicles, bank accounts, and more.
+
+---
+
+# 1. Introduction to Objects
+
+## Definition
+
+An **Object** is a non-primitive data type that stores data in the form of **properties** and **methods**.
+
+Unlike arrays, which store values using numeric indexes, objects store data using meaningful names called keys.
+
+### Syntax
+
+```javascript
+let student = {
+    name: "Ritika",
+    age: 21,
+    course: "Computer Science"
+};
+```
+
+---
+
+## Characteristics of Objects
+
+* Stores data in key-value pairs.
+* Keys are unique.
+* Values can be of any data type.
+* Can contain functions.
+* Dynamic in nature.
+* Objects are mutable (modifiable).
+
+---
+
+## Creating Objects
+
+### Using Object Literal
+
+The simplest and most commonly used method.
+
+```javascript
+let car = {
+    brand: "Toyota",
+    model: "Fortuner"
+};
+```
+
+---
+
+### Using Object Constructor
+
+```javascript
+let car = new Object();
+
+car.brand = "Toyota";
+car.model = "Fortuner";
+```
+
+---
+
+## Accessing Object Properties
+
+### Dot Notation
+
+```javascript
+console.log(student.name);
+```
+
+---
+
+### Bracket Notation
+
+```javascript
+console.log(student["age"]);
+```
+
+Bracket notation is useful when property names contain spaces or are stored in variables.
+
+---
+
+## Updating Properties
+
+```javascript
+student.age = 22;
+```
+
+---
+
+## Adding New Properties
+
+```javascript
+student.city = "Bhopal";
+```
+
+---
+
+## Deleting Properties
+
+```javascript
+delete student.city;
+```
+
+---
+
+## Advantages
+
+* Organizes related data.
+* Easy to update.
+* Flexible structure.
+* Represents real-world entities.
+
+---
+
+## Applications
+
+* User Profiles
+* Product Details
+* Banking Systems
+* Employee Records
+* Student Management Systems
+* API Responses
+
+---
+
+# 2. Object Properties and Methods
+
+## Object Properties
+
+Properties represent the characteristics or attributes of an object.
+
+Example
+
+```javascript
+let employee = {
+    name: "Rahul",
+    salary: 50000
+};
+```
+
+Properties are:
+
+* name
+* salary
+
+---
+
+## Object Methods
+
+Methods are functions stored inside an object.
+
+Example
+
+```javascript
+let person = {
+    name: "Ritika",
+
+    greet: function(){
+        console.log("Welcome");
+    }
+};
+
+person.greet();
+```
+
+---
+
+## Built-in Object Methods
+
+### Object.keys()
+
+Returns all property names.
+
+```javascript
+Object.keys(student);
+```
+
+---
+
+### Object.values()
+
+Returns all property values.
+
+```javascript
+Object.values(student);
+```
+
+---
+
+### Object.entries()
+
+Returns key-value pairs.
+
+```javascript
+Object.entries(student);
+```
+
+---
+
+### hasOwnProperty()
+
+Checks whether a property exists.
+
+```javascript
+student.hasOwnProperty("name");
+```
+
+---
+
+## Advantages
+
+* Keeps related data together.
+* Improves code organization.
+* Makes objects reusable.
+
+---
+
+## Applications
+
+* Managing application data.
+* API development.
+* Configuration objects.
+* JSON handling.
+
+---
+
+# 3. this Keyword
+
+## Definition
+
+The **this** keyword refers to the object that is currently executing the function.
+
+Its value depends on how and where the function is called.
+
+---
+
+## Example
+
+```javascript
+let student = {
+    name: "Ritika",
+
+    display(){
+        console.log(this.name);
+    }
+};
+
+student.display();
+```
+
+Output
+
+```text
+Ritika
+```
+
+---
+
+## Uses of this
+
+* Access object properties.
+* Call object methods.
+* Constructor functions.
+* Classes.
+* Event handling.
+
+---
+
+## Advantages
+
+* Eliminates repetition.
+* Makes methods reusable.
+* Improves readability.
+
+---
+
+# 4. Constructor Functions
+
+## Definition
+
+A **Constructor Function** is a special function used to create multiple objects with the same structure.
+
+The **new** keyword is used to create an object.
+
+---
+
+## Syntax
+
+```javascript
+function Student(name, age){
+
+    this.name = name;
+    this.age = age;
+
+}
+
+let s1 = new Student("Ritika",21);
+```
+
+---
+
+## Benefits
+
+* Avoids duplicate code.
+* Creates multiple objects easily.
+* Reusable object template.
+
+---
+
+## Applications
+
+* Employee Records
+* Product Objects
+* Student Objects
+* Banking Applications
+
+---
+
+# 5. Prototypes
+
+## Definition
+
+A **Prototype** is an object from which other objects inherit properties and methods.
+
+Every JavaScript object has an associated prototype.
+
+Prototype-based inheritance allows objects to share methods instead of creating copies for every object.
+
+---
+
+## Example
+
+```javascript
+function Student(name){
+
+    this.name = name;
+
+}
+
+Student.prototype.display = function(){
+
+    console.log(this.name);
+
+};
+
+let s1 = new Student("Ritika");
+
+s1.display();
+```
+
+---
+
+## Advantages
+
+* Saves memory.
+* Shared methods.
+* Faster object creation.
+* Supports inheritance.
+
+---
+
+## Applications
+
+* Library development.
+* Object inheritance.
+* Performance optimization.
+
+---
+
+# 6. Classes and Objects
+
+## Definition
+
+A **Class** is a blueprint for creating objects.
+
+Introduced in **ES6**, classes provide a cleaner syntax for object-oriented programming.
+
+An **Object** is an instance of a class.
+
+---
+
+## Syntax
+
+```javascript
+class Student{
+
+    constructor(name, age){
+
+        this.name = name;
+        this.age = age;
+
+    }
+
+    display(){
+
+        console.log(this.name);
+
+    }
+
+}
+
+let s1 = new Student("Ritika",21);
+
+s1.display();
+```
+
+---
+
+## Advantages
+
+* Cleaner syntax.
+* Easy inheritance.
+* Better code organization.
+* Supports OOP concepts.
+
+---
+
+## Applications
+
+* Game Development
+* Banking Software
+* E-commerce Applications
+* Employee Management Systems
+
+---
+
+# 7. Inheritance
+
+## Definition
+
+**Inheritance** is an Object-Oriented Programming (OOP) concept where one class acquires the properties and methods of another class.
+
+The existing class is called the **Parent (Base) Class**, and the new class is called the **Child (Derived) Class**.
+
+JavaScript uses the **extends** keyword for inheritance.
+
+---
+
+## Example
+
+```javascript
+class Animal{
+
+    sound(){
+
+        console.log("Animal Sound");
+
+    }
+
+}
+
+class Dog extends Animal{
+
+}
+
+let d = new Dog();
+
+d.sound();
+```
+
+---
+
+## Advantages
+
+* Code reusability.
+* Reduces duplication.
+* Easier maintenance.
+* Hierarchical organization.
+
+---
+
+## Applications
+
+* Banking Systems
+* Vehicle Management
+* School Management
+* Employee Management
+
+---
+
+# 8. Encapsulation
+
+## Definition
+
+**Encapsulation** is the process of combining data and methods into a single unit while restricting direct access to certain data.
+
+It protects an object's internal state and allows controlled access through methods.
+
+Modern JavaScript supports private fields using the **#** symbol.
+
+---
+
+## Example
+
+```javascript
+class Bank{
+
+    #balance = 10000;
+
+    getBalance(){
+
+        return this.#balance;
+
+    }
+
+}
+
+let account = new Bank();
+
+console.log(account.getBalance());
+```
+
+---
+
+## Advantages
+
+* Data security.
+* Prevents accidental modification.
+* Better maintainability.
+* Controlled access.
+
+---
+
+## Applications
+
+* Banking Systems
+* User Authentication
+* Secure APIs
+* Medical Records
+
+---
+
+# 9. Polymorphism
+
+## Definition
+
+**Polymorphism** means "many forms." It allows different classes to define methods with the same name but different implementations.
+
+The same method behaves differently depending on the object that calls it.
+
+---
+
+## Example
+
+```javascript
+class Animal{
+
+    sound(){
+
+        console.log("Animal Sound");
+
+    }
+
+}
+
+class Dog extends Animal{
+
+    sound(){
+
+        console.log("Bark");
+
+    }
+
+}
+
+class Cat extends Animal{
+
+    sound(){
+
+        console.log("Meow");
+
+    }
+
+}
+
+let d = new Dog();
+
+let c = new Cat();
+
+d.sound();
+
+c.sound();
+```
+
+---
+
+## Advantages
+
+* Improves flexibility.
+* Supports method overriding.
+* Reduces code complexity.
+* Easier code maintenance.
+
+---
+
+## Applications
+
+* Game Development
+* Graphic Applications
+* Payment Systems
+* Plugin Architecture
+* Software Frameworks
+
+---
+
+# Difference Between Constructor Function and Class
+
+### Constructor Function
+
+* Introduced before ES6.
+* Uses the `function` keyword.
+* Objects are created using the `new` keyword.
+* Inheritance is achieved using prototypes.
+* Syntax is more complex than classes.
+
+### Class
+
+* Introduced in ES6.
+* Uses the `class` keyword.
+* Provides cleaner and more readable syntax.
+* Supports inheritance using the `extends` keyword.
+* Preferred for modern JavaScript development.
+
+---
+
+# Difference Between Object and Class
+
+### Object
+
+* An instance of a class.
+* Stores actual data.
+* Occupies memory.
+* Multiple objects can be created from one class.
+
+### Class
+
+* A blueprint for creating objects.
+* Defines properties and methods.
+* Does not store actual data until objects are created.
+* Promotes code reusability.
+
+---
+
+# Summary
+
+* **Objects** store related data and behavior using properties and methods, making JavaScript applications modular and organized.
+* **Object Properties and Methods** define an object's characteristics and actions, enabling structured programming.
+* The **`this` keyword** refers to the current object and is essential for accessing object members.
+* **Constructor Functions** provide a reusable way to create multiple objects with the same structure.
+* **Prototypes** enable objects to share methods efficiently, supporting JavaScript's prototype-based inheritance model.
+* **Classes and Objects** introduce a cleaner, ES6-based syntax for object-oriented programming.
+* **Inheritance** allows child classes to reuse and extend the functionality of parent classes, improving code reusability.
+* **Encapsulation** protects object data by restricting direct access and exposing controlled methods.
+* **Polymorphism** enables the same method name to exhibit different behaviors in different classes, making applications more flexible and maintainable.
